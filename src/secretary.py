@@ -37,6 +37,13 @@ class Secretary:
             backlog.tasks.append(task)
         return backlog
 
+    def write_to_vault(self, title: str, content: str):
+        vault_path = "/Users/shagwu/Documents/MySecondBrain"
+        file_path = os.path.join(vault_path, f"{title}.md")
+        with open(file_path, "w") as f:
+            f.write(content)
+        print(f"Secretary: I've archived a new note in your vault: {title}.md")
+
 if __name__ == "__main__":
     sec = Secretary()
     # Test saving a plan

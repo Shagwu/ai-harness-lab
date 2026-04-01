@@ -29,6 +29,11 @@ def get_default_tools() -> List[Tool]:
             name="gemini_research",
             description="Uses Gemini CLI to research a topic and provide a detailed summary.",
             parameters={"topic": "string"}
+        ),
+        Tool(
+            name="obsidian_note",
+            description="Creates a new note in your Obsidian Vault.",
+            parameters={"title": "string", "content": "string"}
         )
     ]
 
