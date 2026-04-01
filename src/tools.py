@@ -24,6 +24,11 @@ def get_default_tools() -> List[Tool]:
             name="write_file",
             description="Allows the AI to write new information to a file.",
             parameters={"path": "string", "content": "string"}
+        ),
+        Tool(
+            name="gemini_research",
+            description="Uses Gemini CLI to research a topic and provide a detailed summary.",
+            parameters={"topic": "string"}
         )
     ]
 
